@@ -1,11 +1,16 @@
 const mario = document.querySelector('.mario')
 const pipe = document.querySelector('.pipe')
+let marioJump = false
 
 const jump = () => {
-    mario.classList.add('jump');
-    setTimeout(() => {
-        mario.classList.remove('jump');
-    }, 500);
+    if (marioJump) {
+        mario.classList.add('jump');
+        marioJump = true
+        setTimeout(() => {
+            mario.classList.remove('jump');
+            marioJump = false
+        }, 500);
+    }
 }
 
 const loop = setInterval(() => {
