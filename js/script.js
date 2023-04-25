@@ -4,7 +4,7 @@ const pipe = document.querySelector('.pipe')
 const jump = () => {
     mario.classList.add(jump);
 
-    serTimeout(() => {
+    setTimeout(() => {
     mario.classList.remove('jump');
     }, 500);
 }
