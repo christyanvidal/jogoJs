@@ -3,7 +3,7 @@ const pipe = document.querySelector('.pipe')
 let marioJump = false
 
 const jump = () => {
-    if (marioJump) {
+    if (!marioJump) {
         mario.classList.add('jump');
         marioJump = true
         setTimeout(() => {
